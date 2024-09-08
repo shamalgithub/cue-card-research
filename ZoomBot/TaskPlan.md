@@ -1,6 +1,22 @@
 ## ZOOM BOT DEPLOYMENT 
 
 
+```mermaid
+graph LR
+  C[Client]
+  API[FastAPI]
+  Z[Zoom container]
+  M[Zoom meeting]
+  T[Transcription service]
+  
+  C-->|zoom link|API
+  API -->|spin up new container|Z
+  Z -->|join zoom meeting|M
+  Z -->|get the audio file|API
+  API -->|Send audio file for transcription|T
+  T -->|transcription|API
+```
+
 ### 1. Build and push the “Zoom SDK” container to the AWS container registry 
 #### 1.1. Ask for the AWS container registry for CueCard (Karthik) ⌛
 
