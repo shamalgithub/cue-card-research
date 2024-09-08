@@ -21,7 +21,7 @@ OR
 
 We would need to decide on either of the above approaches and write out the code. 
 
-    Option A is less costly as we can take advantage of the default storage that is provided by AWS when each new container instance is created (20 GiB all the way to 200 GiB). The question here is “can we access the running container and grab the audio file programmatically  before it's terminated ?”. We would first need to test this out.
+Option A is less costly as we can take advantage of the default storage that is provided by AWS when each new container instance is created (20 GiB all the way to 200 GiB). The question here is “can we access the running container and grab the audio file programmatically  before it's terminated ?”. We would first need to test this out.
 
 ### 2. Build the FastAPI Microservice  
 ### 3. Integration Test with the Client App 
